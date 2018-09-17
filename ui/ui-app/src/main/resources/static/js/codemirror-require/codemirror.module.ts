@@ -7,14 +7,14 @@ export class KyloCodeMirrorModule {
         // Load CodeMirror
         const $window: any = window;
         if ($window.CodeMirror == null) {
-            $window.CodeMirror = require('../../bower_components/codemirror/lib/codemirror');
+            $window.CodeMirror = require('../../node_modules/codemirror/lib/codemirror');
         }
 
         // Load CodeMirror plugins
-        $ocLazyLoad.load(['bower_components/codemirror/lib/codemirror.css',
-            'bower_components/codemirror/addon/hint/show-hint.css',
-            'bower_components/codemirror/addon/dialog/dialog.css',
-            'bower_components/codemirror/addon/tern/tern.css',
+        $ocLazyLoad.load(['node_modules/codemirror/lib/codemirror.css',
+            'node_modules/codemirror/addon/hint/show-hint.css',
+            'node_modules/codemirror/addon/dialog/dialog.css',
+            'node_modules/codemirror/addon/tern/tern.css',
             'codemirror/mode/pig/pig',
             'codemirror/mode/properties/properties',
             'codemirror/mode/python/python',
