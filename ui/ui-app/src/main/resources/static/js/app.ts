@@ -198,7 +198,7 @@ constructor() {
                                              'bower_components/angular-material-data-table/dist/md-data-table.css',
                                              'bower_components/nvd3/build/nv.d3.css',
                                              'node_modules/codemirror/lib/codemirror.css',
-                                             'bower_components/vis/dist/vis.min.css'
+                                             'node_modules/vis/dist/vis.min.css'
         ]})
 
     }
