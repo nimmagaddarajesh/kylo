@@ -44,7 +44,6 @@
     "pivottable": "~2.7.0",
     "requirejs": "~2.1.18",
     "svg-morpheus": "latest",
-    "underscore": "1.8.3",
     "fattable": "fulmicoton/fattable",
     "mdPickers": "^0.7.5",
     "angular-translate": "^2.16.0",

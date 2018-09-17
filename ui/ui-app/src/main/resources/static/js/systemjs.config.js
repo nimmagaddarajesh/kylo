@@ -13,6 +13,7 @@ System.config({
     paths: {
         "angular-material-icons":"vendor/angular-material-icons/angular-material-icons",
         "app":"app",
+        "npm:": "../node_modules/",
         "bower:": "../bower_components/",
         "cardLayout":"common/card-layout/card-layout",
         "codemirror": "../bower_components/codemirror/lib/codemirror",
@@ -33,12 +34,11 @@ System.config({
         "kylo-ui-codemirror":"codemirror-require/module",
         "kyloTimer":"common/timer/kylo-timer",
         "ment-io":"vendor/ment.io/mentio",
-        "npm:": "../node_modules/",
         "ng-text-truncate":"vendor/ng-text-truncate/ng-text-truncate",
         "routes": "routes",
         "services/module-name":"services/module-name",
         "svg-morpheus":"../bower_components/svg-morpheus/compile/unminified/svg-morpheus",
-        "underscore":"../bower_components/underscore/underscore-min",
+        "underscore":"npm:underscore/underscore-min",
         "vis":"../bower_components/vis/dist/vis.min",
         "tmh.dynamicLocale": "../bower_components/angular-dynamic-locale/dist/tmhDynamicLocale.min",
         "pascalprecht.translate":"../bower_components/angular-translate/angular-translate",
@@ -179,7 +179,7 @@ System.config({
         "svg-morpheus":"bower:svg-morpheus/compile/unminified/svg-morpheus",
         'tslib': 'npm:tslib/tslib',
         "ui-grid": "angular-ui-grid",
-        "underscore":"bower:underscore/underscore-min",
+        "underscore":"npm:underscore/underscore-min",
         "vis":"bower:vis/dist/vis.min",
         "mdPickers":"bower:mdPickers/dist/mdPickers.min"
         //,"ngx-drag-and-drop-lists":"npm:ngx-drag-and-drop-lists/index"
