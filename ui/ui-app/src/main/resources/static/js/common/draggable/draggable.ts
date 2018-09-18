@@ -1,6 +1,6 @@
 import * as angular from "angular";
 import {moduleName} from "../module-name";
-const Draggabilly = require("../../../bower_components/draggabilly/dist/draggabilly.pkgd");
+const Draggabilly = require("../../../node_modules/draggabilly/dist/draggabilly.pkgd");
 
 angular.module(moduleName).directive('ngDraggable', [()=> {
         return {

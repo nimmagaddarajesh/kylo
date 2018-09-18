@@ -164,7 +164,7 @@ export class VisualQueryModule {
     constructor(@Inject("$ocLazyLoad") $ocLazyLoad: ILazyLoad) {
         $ocLazyLoad.load({
             files: [
-                "bower_components/fattable/fattable.css",
+                "node_modules/fattable/fattable.css",
                 "js/feed-mgr/visual-query/visual-query.component.css"
             ]
         });

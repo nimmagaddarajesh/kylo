@@ -1,7 +1,7 @@
 import * as angular from 'angular';
 import "../kylo-utils/LazyLoadUtil";
 const CodeMirror = require('../../node_modules/codemirror/lib/codemirror');
-import "../../bower_components/angular-ui-codemirror/ui-codemirror";
+import "../../node_modules/angular-ui-codemirror/ui-codemirror";
 import {moduleName} from "./module-name";
 
 class ModuleFactory  {

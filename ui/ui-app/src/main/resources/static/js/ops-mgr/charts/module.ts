@@ -20,7 +20,7 @@ class ModuleFactory  {
     }
 
     runFn($ocLazyLoad: any){
-        $ocLazyLoad.load({name:'kylo',files:['bower_components/c3/c3.css',
+        $ocLazyLoad.load({name:'kylo',files:['node_modules/c3/c3.css',
                                              'js/ops-mgr/charts/pivot.css'
         ]})
     }

@@ -86,7 +86,7 @@ constructor() {
             .fallbackLanguage('en')
             .useLocalStorage();  // saves selected language to localStorage
 
-        tmhDynamicLocaleProvider.localeLocationPattern('../bower_components/angular-i18n/angular-locale_{{locale}}.js');
+        tmhDynamicLocaleProvider.localeLocationPattern('../node_modules/angular-i18n/angular-locale_{{locale}}.js');
 
         //read in any theme info from the __env
         if(__env.themes) {
@@ -193,10 +193,10 @@ constructor() {
     }
 
     runFn($ocLazyLoad: any, $translate: any){
-        $ocLazyLoad.load({name:'kylo',files:['bower_components/angular-material-icons/angular-material-icons.css',
-                                             'bower_components/angular-material-expansion-panel/dist/md-expansion-panel.css',
-                                             'bower_components/angular-material-data-table/dist/md-data-table.css',
-                                             'bower_components/nvd3/build/nv.d3.css',
+        $ocLazyLoad.load({name:'kylo',files:['node_modules/angular-material-icons/angular-material-icons.css',
+                                             'node_modules/angular-material-expansion-panel/dist/md-expansion-panel.css',
+                                             'node_modules/angular-material-data-table/dist/md-data-table.css',
+                                             'node_modules/nvd3/build/nv.d3.css',
                                              'node_modules/codemirror/lib/codemirror.css',
                                              'node_modules/vis/dist/vis.min.css'
         ]})

@@ -58,7 +58,7 @@ class ModuleFactory  {
     runFn($ocLazyLoad: oc.ILazyLoad){
         $ocLazyLoad.load({
             name: 'kylo', 
-            files: ['bower_components/angular-ui-grid/ui-grid.css', 'assets/ui-grid-material.css'],
+            files: ['node_modules/angular-ui-grid/ui-grid.css', 'assets/ui-grid-material.css'],
             serie: true
             })
     }
