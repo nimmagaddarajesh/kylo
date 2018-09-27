@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from "@angular/core";
+import {Component, OnInit} from "@angular/core";
 import {StateService} from "@uirouter/angular";
 import {DefineFeedService} from "../../services/define-feed.service";
 import {AbstractLoadFeedComponent} from "../../shared/AbstractLoadFeedComponent";
@@ -7,8 +7,8 @@ import {FeedSideNavService} from "../../shared/feed-side-nav.service";
 
 @Component({
     selector: "define-feed-profile",
-    styleUrls: ["js/feed-mgr/feeds/define-feed-ng2/summary/profile/profile.component.css"],
-    templateUrl: "js/feed-mgr/feeds/define-feed-ng2/summary/profile/profile.component.html"
+    styleUrls: ["profile.component.scss"],
+    templateUrl: "profile.component.html"
 })
 export class ProfileComponent extends AbstractLoadFeedComponent implements OnInit {
 

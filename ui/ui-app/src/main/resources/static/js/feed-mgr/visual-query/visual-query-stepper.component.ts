@@ -9,7 +9,7 @@ import {StepperSelectionEvent} from "@angular/cdk/stepper";
 
 @Component({
     selector: 'visual-query-stepper',
-    templateUrl: 'js/feed-mgr/visual-query/visual-query-stepper.component.html'
+    templateUrl: 'visual-query-stepper.component.html'
 })
 export class VisualQueryStepperComponent implements OnInit, OnDestroy {
 

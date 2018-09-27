@@ -7,8 +7,8 @@ import {FEED_DEFINITION_SECTION_STATE_NAME} from '../../../../../model/feed/feed
 
 @Component({
     selector: 'profile-history',
-    styleUrls: ['js/feed-mgr/feeds/define-feed-ng2/summary/profile/history/profile-history.component.css'],
-    templateUrl: 'js/feed-mgr/feeds/define-feed-ng2/summary/profile/history/profile-history.component.html',
+    styleUrls: ['profile-history.component.scss'],
+    templateUrl: 'profile-history.component.html',
 })
 export class ProfileHistoryComponent implements OnInit {
 

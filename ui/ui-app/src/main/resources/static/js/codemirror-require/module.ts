@@ -13,10 +13,10 @@ class ModuleFactory  {
     }
     runFn($ocLazyLoad: oc.ILazyLoad){
          $ocLazyLoad.load({name:'kylo',files:[
-                                             'node_modules/codemirror/lib/codemirror.css',
-                                             'node_modules/codemirror/addon/hint/show-hint.css',
-                                             'node_modules/codemirror/addon/dialog/dialog.css',
-                                             'node_modules/codemirror/addon/tern/tern.css',
+                                             // 'node_modules/codemirror/lib/codemirror.css',
+                                             // 'node_modules/codemirror/addon/hint/show-hint.css',
+                                             // 'node_modules/codemirror/addon/dialog/dialog.css',
+                                             // 'node_modules/codemirror/addon/tern/tern.css',
                                              'codemirror/mode/pig/pig',
                                              'codemirror/mode/properties/properties',
                                              'codemirror/mode/python/python',

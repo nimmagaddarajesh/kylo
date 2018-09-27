@@ -7,8 +7,8 @@ import {ISubscription} from "rxjs/Subscription";
 
 @Component({
     selector:"feed-info-item",
-    styleUrls:["js/feed-mgr/feeds/define-feed-ng2/summary/overview/feed-info-item.component.css"],
-    templateUrl:"js/feed-mgr/feeds/define-feed-ng2/summary/overview/feed-info-item.component.html"
+    styleUrls:["feed-info-item.component.css"],
+    templateUrl:"feed-info-item.component.html"
 })
 export class FeedInfoItemComponent implements OnDestroy{
 

@@ -11,7 +11,7 @@ import {SaveFeedResponse} from "../../../model/save-feed-response.model";
 
 @Component({
     selector:"feed-info-tags",
-    templateUrl:"js/feed-mgr/feeds/define-feed-ng2/summary/overview/feed-info-tags/feed-info-tags.component.html"
+    templateUrl:"feed-info-tags.component.html"
 })
 export class FeedInfoTagsComponent  extends AbstractFeedInfoItemComponent implements OnInit{
 

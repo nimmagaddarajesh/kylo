@@ -58,8 +58,8 @@ class TablePermissions {
 
 @Component({
     selector: "define-feed-step-table",
-    styleUrls: ["js/feed-mgr/feeds/define-feed-ng2/steps/define-table/define-feed-table.component.css"],
-    templateUrl: "js/feed-mgr/feeds/define-feed-ng2/steps/define-table/define-feed-table.component.html"
+    styleUrls: ["define-feed-table.component.css"],
+    templateUrl: "define-feed-table.component.html"
 })
 export class DefineFeedTableComponent extends AbstractFeedStepComponent implements OnInit,OnDestroy{
 

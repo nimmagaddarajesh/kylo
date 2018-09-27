@@ -3,11 +3,11 @@
  *
 
  define([
-    'angular', 
-    'feed-mgr/module-name', 
-    'codemirror-require/module', 
-    'kylo-common', 
-    'kylo-services', 
+    'angular',
+    'feed-mgr/module-name',
+    'codemirror-require/module',
+    'kylo-common',
+    'kylo-services',
     'jquery',
     'angular-drag-and-drop-lists',
     'feed-mgr/catalog/catalog.module',
@@ -57,18 +57,7 @@ class ModuleFactory  {
         $compileProvider.preAssignBindingsEnabled(true);
     }
     runFn($ocLazyLoad: any){
-        $ocLazyLoad.load({
-            name: 'kylo',
-            files: ['node_modules/angular-ui-grid/ui-grid.css',
-                'assets/ui-grid-material.css',
-                'js/feed-mgr/shared/cron-expression-preview/cron-expression-preview.css',
-                'js/vendor/font-awesome/css/font-awesome.min.css',
-                'js/feed-mgr/shared/apply-domain-type/apply-table-domain-types.component.css',
-                "node_modules/fattable/fattable.css",
-                'js/feed-mgr/services/fattable/fattable-service.css'
-            ], serie: true
-        })
-
+        $ocLazyLoad.load('kylo');
     }
 
 }

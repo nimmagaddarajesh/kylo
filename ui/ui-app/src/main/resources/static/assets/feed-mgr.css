@@ -101,6 +101,7 @@ thinkbig-stepper .md-tab {
 thinkbig-stepper .md-tab.arrow-tab {
   background-image: url('images/75_arrow.svg');
   background-repeat: no-repeat;
+
   background-position: right center;
 }
 

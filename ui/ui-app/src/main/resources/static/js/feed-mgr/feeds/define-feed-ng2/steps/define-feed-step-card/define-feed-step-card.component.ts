@@ -10,8 +10,8 @@ import {FeedSideNavService} from "../../shared/feed-side-nav.service";
 
 @Component({
     selector: "define-feed-step-card",
-    styleUrls: ["js/feed-mgr/feeds/define-feed-ng2/steps/define-feed-step-card/define-feed-step-card.component.css"],
-    templateUrl: "js/feed-mgr/feeds/define-feed-ng2/steps/define-feed-step-card/define-feed-step-card.component.html"
+    styleUrls: ["define-feed-step-card.component.scss"],
+    templateUrl: "define-feed-step-card.component.html"
 })
 export class DefineFeedStepCardComponent implements OnInit {
 

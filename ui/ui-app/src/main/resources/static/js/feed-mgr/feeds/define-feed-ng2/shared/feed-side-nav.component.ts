@@ -12,8 +12,8 @@ import {OverviewComponent} from "../summary/overview/overview.component";
 
 @Component({
     selector: "feed-definition-side-nav",
-    styleUrls:["js/feed-mgr/feeds/define-feed-ng2/shared/feed-side-nav.component.css"],
-    templateUrl: "js/feed-mgr/feeds/define-feed-ng2/shared/feed-side-nav.component.html"
+    styleUrls:["feed-side-nav.component.css"],
+    templateUrl: "feed-side-nav.component.html"
 })
 export class FeedSideNavComponent  implements OnInit{
     @Input()

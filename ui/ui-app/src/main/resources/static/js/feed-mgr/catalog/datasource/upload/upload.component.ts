@@ -22,8 +22,8 @@ export class UploadFilesChangeEvent {
  */
 @Component({
     selector: "local-files",
-    styleUrls: ["js/feed-mgr/catalog/datasource/upload/upload.component.css"],
-    templateUrl: "js/feed-mgr/catalog/datasource/upload/upload.component.html"
+    styleUrls: ["upload.component.scss"],
+    templateUrl: "upload.component.html"
 })
 export class UploadComponent implements OnInit {
 

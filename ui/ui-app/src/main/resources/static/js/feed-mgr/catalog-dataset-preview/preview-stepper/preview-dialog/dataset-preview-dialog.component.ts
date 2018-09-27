@@ -19,8 +19,8 @@ constructor(public dataset?:PreviewDataSet)  {  }
 }
 @Component({
     selector: "dataset-preview-dialog",
-    styleUrls:["js/feed-mgr/catalog-dataset-preview/preview-stepper/preview-dialog/dataset-preview-dialog.component.css"],
-    templateUrl: "js/feed-mgr/catalog-dataset-preview/preview-stepper/preview-dialog/dataset-preview-dialog.component.html"
+    styleUrls:["dataset-preview-dialog.component.scss"],
+    templateUrl: "dataset-preview-dialog.component.html"
 })
 export class DatasetPreviewDialogComponent  implements OnInit, OnDestroy{
     static DIALOG_CONFIG() {

@@ -18,8 +18,8 @@ import {BrowserService} from "./browser.service";
 
 @Component({
     selector: "remote-files",
-    styleUrls: ["js/feed-mgr/catalog/datasource/api/browser.component.css"],
-    templateUrl: "js/feed-mgr/catalog/datasource/api/browser.component.html"
+    styleUrls: ["browser.component.scss"],
+    templateUrl: "browser.component.html"
 })
 export class BrowserComponent implements OnInit {
 

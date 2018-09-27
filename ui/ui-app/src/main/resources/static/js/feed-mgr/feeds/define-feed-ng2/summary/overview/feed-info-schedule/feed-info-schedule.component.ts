@@ -11,7 +11,7 @@ import {AbstractFeedInfoItemComponent} from "../abstract-feed-info-item.componen
 
 @Component({
     selector:"feed-info-schedule",
-    templateUrl:"js/feed-mgr/feeds/define-feed-ng2/summary/overview/feed-info-schedule/feed-info-schedule.component.html"
+    templateUrl:"feed-info-schedule.component.html"
 })
 export class FeedInfoScheduleComponent extends AbstractFeedInfoItemComponent implements OnInit{
 

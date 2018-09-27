@@ -34,12 +34,12 @@ export default class CardFilterHeader {
         this.renderFilter = angular.isUndefined(this.renderFilter) ? true : this.renderFilter;
         this.renderHelp = angular.isDefined(this.onShowFilterHelp);
         this.customFilterTemplate = angular.isUndefined(this.customFilterTemplate) ? '' : this.customFilterTemplate;
-    
+
     }
 
     static readonly $inject = ["$element","TableOptionsService"];
 
-    constructor(private $element: JQuery, 
+    constructor(private $element: JQuery,
                 private TableOptionsService: DefaultTableOptionsService) {}
 
     /**
@@ -99,6 +99,6 @@ angular.module(moduleName).component("tbaCardFilterHeader",{
         customFilterTemplate:'@?'
     },
     controllerAs: '$cardFilterHeader',
-    templateUrl: 'js/common/card-filter-header/card-filter-header-template.html'
-    
+    templateUrl: 'card-filter-header-template.html'
+
 });

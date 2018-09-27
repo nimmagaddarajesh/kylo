@@ -11,8 +11,8 @@ import {EntityAccessControlComponent} from "../../../../shared/entity-access-con
 
 @Component({
     selector: "define-feed-permissions",
-    styleUrls: ["js/feed-mgr/feeds/define-feed-ng2/steps/permissions/define-feed-permissions.component.css"],
-    templateUrl: "js/feed-mgr/feeds/define-feed-ng2/steps/permissions/define-feed-permissions.component.html"
+    styleUrls: ["define-feed-permissions.component.scss"],
+    templateUrl: "define-feed-permissions.component.html"
 })
 export class DefineFeedPermissionsComponent extends AbstractFeedStepComponent {
 

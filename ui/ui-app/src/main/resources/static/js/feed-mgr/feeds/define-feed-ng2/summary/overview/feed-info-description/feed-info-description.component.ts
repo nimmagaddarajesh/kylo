@@ -8,7 +8,7 @@ import {FeedItemInfoService} from "../feed-item-info.service";
 
 @Component({
     selector:"feed-info-description",
-    templateUrl:"js/feed-mgr/feeds/define-feed-ng2/summary/overview/feed-info-description/feed-info-description.component.html"
+    templateUrl:"feed-info-description.component.html"
 })
 export class FeedInfoDescriptionComponent  extends AbstractFeedInfoItemComponent implements OnInit{
 

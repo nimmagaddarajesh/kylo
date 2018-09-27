@@ -5,8 +5,11 @@ import AccessControlService from '../../services/AccessControlService';
 import { EntityAccessControlService } from '../shared/entity-access-control/EntityAccessControlService';
 import { DefaultPaginationDataService } from '../../services/PaginationDataService';
 import { FeedService } from '../services/FeedService';
+import {IComponentController, IComponentOptions} from 'angular';
 const moduleName = require('./module-name');
-export default class FeedsTableController implements ng.IComponentController {
+import 'kylo-feedmgr';
+
+class FeedsTableController implements IComponentController {
 
     allowExport:boolean = false;
     feedData:any = []
@@ -25,6 +28,8 @@ export default class FeedsTableController implements ng.IComponentController {
     
 
 
+    public static $inject = ["$scope","$http","AccessControlService","RestUrlService","PaginationDataService",
+        "TableOptionsService","AddButtonService","FeedService","StateService", '$filter', "EntityAccessControlService"];
 
     constructor(
         private $scope: angular.IScope,
@@ -227,12 +232,18 @@ export default class FeedsTableController implements ng.IComponentController {
 
 
 
+class FeedTableComponent implements IComponentOptions {
+    private template: any;
+    private controller: FeedsTableController;
+    private controllerAs = 'vm';
+    constructor() {
+        this.template = require("./feeds-table.html");
+        this.controller = FeedsTableController;
+    }
+}
 
+const FEEDS_TABLE_MODULE = angular
+    .module("feeds.table.module", [])
+    .component("feedTableComponent", new FeedTableComponent());
 
-    angular.module(moduleName)
-        .controller('FeedsTableController',
-            ["$scope","$http","AccessControlService","RestUrlService","PaginationDataService",
-            "TableOptionsService","AddButtonService","FeedService","StateService", '$filter', "EntityAccessControlService", 
-            FeedsTableController]);
-
-
+export default FEEDS_TABLE_MODULE;

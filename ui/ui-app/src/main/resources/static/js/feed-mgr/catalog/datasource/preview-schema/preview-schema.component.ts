@@ -41,8 +41,8 @@ import {PreviewDatasetCollectionService} from "../../api/services/preview-datase
 //NOT USED NOW!!!
 @Component({
     selector: "preview-schema",
-    styleUrls: ["js/feed-mgr/catalog/datasource/preview-schema/preview-schema.component.css"],
-    templateUrl: "js/feed-mgr/catalog/datasource/preview-schema/preview-schema.component.html"
+    styleUrls: ["preview-schema.component.scss"],
+    templateUrl: "preview-schema.component.html"
 })
 export class PreviewSchemaComponent implements OnInit {
 
@@ -426,7 +426,7 @@ export class PreviewSchemaComponent implements OnInit {
 
 @Component({
     selector: 'dataset-simple-table',
-    styleUrls:["js/feed-mgr/catalog/datasource/preview-schema/dataset-simple-table.component.css"],
+    styleUrls:["dataset-simple-table.component.scss"],
     template:`
         <div class="dataset-simple-table">
     <table td-data-table >

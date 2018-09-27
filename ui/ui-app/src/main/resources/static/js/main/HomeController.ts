@@ -2,7 +2,7 @@ import * as angular from 'angular';
 import StateService from  "../services/StateService";
 import AccessControlService from "../services/AccessControlService";
 import AccessConstants from "../constants/AccessConstants";
-export class HomeController implements ng.IComponentController{
+class HomeController implements ng.IComponentController{
     static readonly $inject = ['$scope', '$mdDialog', 'AccessControlService','StateService'];
     constructor(
         private $scope:angular.IScope,
@@ -10,6 +10,7 @@ export class HomeController implements ng.IComponentController{
         private accessControlService:AccessControlService,
         private StateService:StateService
         ){
+        console.log('HomeController constructor');
         // Fetch the list of allowed actions
        accessControlService.getUserAllowedActions()
                                 .then((actionSet: any)=>{
@@ -28,6 +29,7 @@ export class HomeController implements ng.IComponentController{
          * @param actions the allowed actions
          */
         onLoad(actions: any) {
+            console.log('HomeController onLoad');
             // Determine the home page
             if (this.accessControlService.hasAction(AccessConstants.FEEDS_ACCESS, actions)) {
                 return this.StateService.FeedManager().Feed().navigateToFeeds();
@@ -67,9 +69,11 @@ export class HomeController implements ng.IComponentController{
             this.loading = false;
         }
 }
-  angular.module('kylo').component("homeController", { 
+const MODULE = angular.module('kylo').component("homeController", {
         controller: HomeController,
         controllerAs: "vm",
-        templateUrl: "js/main/home.html"
+        templateUrl: "home.html"
     });
 //  .controller('HomeController', [HomeController]);
+
+export default MODULE;

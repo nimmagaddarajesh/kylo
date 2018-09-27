@@ -1,4 +1,4 @@
-import {Component, Input, OnDestroy, OnInit} from "@angular/core";
+import {Component, Input} from "@angular/core";
 import {StateService} from "@uirouter/angular";
 import {DefineFeedService} from "../../services/define-feed.service";
 import {AbstractLoadFeedComponent} from "../../shared/AbstractLoadFeedComponent";
@@ -11,8 +11,8 @@ import {ISubscription} from "rxjs/Subscription";
 
 @Component({
     selector: "define-feed-overview",
-    styleUrls: ["js/feed-mgr/feeds/define-feed-ng2/summary/overview/overview.component.scss"],
-    templateUrl: "js/feed-mgr/feeds/define-feed-ng2/summary/overview/overview.component.html"
+    styleUrls: ["overview.component.scss"],
+    templateUrl: "overview.component.html"
 })
 export class OverviewComponent extends AbstractLoadFeedComponent  {
 

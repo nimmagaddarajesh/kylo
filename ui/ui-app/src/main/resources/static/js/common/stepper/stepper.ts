@@ -246,7 +246,7 @@ angular.module(moduleName).directive("thinkbigStepper",
                 onCancelStepper: '&?',
                 showCancelButton: '@',
                 coreDataModel: '=?',
-                templateUrl: '@',
+                // templateUrl: '@',
                 selectedStepIndex: '@',
                 onInitialized: '&?'
             },

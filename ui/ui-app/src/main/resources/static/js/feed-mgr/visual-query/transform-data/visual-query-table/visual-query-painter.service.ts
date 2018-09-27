@@ -13,7 +13,7 @@ const DEFAULT_FONT = "10px ''SourceSansPro'";
 /**
  * HTML template for header cells.
  */
-const HEADER_TEMPLATE = "js/feed-mgr/visual-query/transform-data/visual-query-table/visual-query-table-header.html";
+const HEADER_TEMPLATE = "visual-query-table-header.html";
 
 /**
  * Pixel unit.
@@ -161,7 +161,7 @@ export class VisualQueryPainterService extends fattable.Painter {
             escapeToClose: true,
             focusOnOpen: true,
             panelClass: "_md md-open-menu-container md-whiteframe-z2 visual-query-menu",
-            templateUrl: "js/feed-mgr/visual-query/transform-data/visual-query-table/cell-menu.template.html"
+            templateUrl: "cell-menu.template.html"
         });
         this.menuPanel.attach();
 

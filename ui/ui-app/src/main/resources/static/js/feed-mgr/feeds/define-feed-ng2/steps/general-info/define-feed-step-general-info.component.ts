@@ -35,8 +35,8 @@ import {FeedSideNavService} from "../../shared/feed-side-nav.service";
 
 @Component({
     selector: "define-feed-step-general-info",
-    styleUrls: ["js/feed-mgr/feeds/define-feed-ng2/steps/general-info/define-feed-step-general-info.component.css"],
-    templateUrl: "js/feed-mgr/feeds/define-feed-ng2/steps/general-info/define-feed-step-general-info.component.html"
+    styleUrls: ["define-feed-step-general-info.component.css"],
+    templateUrl: "define-feed-step-general-info.component.html"
 })
 export class DefineFeedStepGeneralInfoComponent extends AbstractFeedStepComponent {
 

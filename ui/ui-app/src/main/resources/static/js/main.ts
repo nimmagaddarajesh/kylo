@@ -1,3 +1,10 @@
+// import './vendor.ts';
+
+import * as angular from 'angular';
+import {setAngularJSGlobal} from '@angular/upgrade/static';
+
+setAngularJSGlobal(angular);
+
 import {IAngularStatic} from "angular";
 import {Injector} from "@angular/core";
 import {platformBrowserDynamic} from "@angular/platform-browser-dynamic";
@@ -9,8 +16,12 @@ import {KyloModule} from "./app.module";
 
 declare const angular: IAngularStatic;
 
+import {MODULE_NAME} from './app.ts';
+
 // Fix @uirouter/core unable to load
 servicesPlugin(null);
+
+import '../assets/global.scss';
 
 // Manually bootstrap the Angular app
 platformBrowserDynamic().bootstrapModule(KyloModule).then(platformRef => {
@@ -18,7 +29,7 @@ platformBrowserDynamic().bootstrapModule(KyloModule).then(platformRef => {
     const upgrade = injector.get(UpgradeModule) as UpgradeModule;
 
     // The DOM must be already be available
-    upgrade.bootstrap(document.body, ["kylo"]);
+    upgrade.bootstrap(document.body, [MODULE_NAME]);
 
     // Initialize the Angular Module (get() any UIRouter service from DI to initialize it)
     const url: UrlService = injector.get(UIRouter).urlService;//getUIRouter(injector).urlService;

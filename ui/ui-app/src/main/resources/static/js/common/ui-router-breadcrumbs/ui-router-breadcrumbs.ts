@@ -6,7 +6,6 @@ import {StateService, Transition} from "@uirouter/core";
 /**
  * Config
  */
-var templateUrl = 'js/common/ui-router-breadcrumbs/uiBreadcrumbs.tpl.html';
 
 export default class RouterBreadcrumbs implements ng.IComponentController {
 
@@ -167,11 +166,13 @@ export default class RouterBreadcrumbs implements ng.IComponentController {
 
 angular.module(moduleName).component("uiRouterBreadcrumbs",{
     controller: RouterBreadcrumbs,
+    controllerAs: "$ctrl",
+    templateUrl: "uiBreadcrumbs.tpl.html",
     bindings: {
         displaynameProperty: '@',
         abstractProxyProperty: '@?'
-    },
-    templateUrl: ($element: any, $attrs: any)=> {
-        return $attrs.templateUrl || templateUrl;
     }
+    // templateUrl: ($element: any, $attrs: any)=> {
+    //     return $attrs.templateUrl || templateUrl;
+    // }
 });

@@ -9,6 +9,9 @@ import AccessControlService from "../services/AccessControlService";
 import AccessConstants from "../constants/AccessConstants";
 import SearchService from "../services/SearchService";
 import SideNavService from "../services/SideNavService";
+import Timer = NodeJS.Timer;
+import "../../assets/images/kylo-logo-orange-200.png";
+
 
 export interface IMyScope extends ng.IScope {
     $mdMedia?: any;
@@ -35,7 +38,7 @@ export class IndexController implements angular.IComponentController {
     /**
      * Timeout for state loader
      */
-    stateLoaderTimeout: number;
+    stateLoaderTimeout: Timer;
 
     static readonly $inject = ["$scope", "$http", "$location", "$timeout", "$window", "$mdSidenav", "$mdMedia",
                                 "$mdBottomSheet", "$log", "$q", "$element","$rootScope", "$transitions", "$$angularInjector",
@@ -209,7 +212,7 @@ export class IndexController implements angular.IComponentController {
             this.loading = true;
 
             this.$mdDialog.show({
-                templateUrl: 'js/main/loading-dialog.html',
+                templateUrl: 'loading-dialog.html',
                 parent: angular.element(document.body),
                 clickOutsideToClose: false,
                 fullscreen: true
@@ -284,5 +287,5 @@ export class IndexController implements angular.IComponentController {
   angular.module('kylo').component("indexController", {
         controller: IndexController,
         controllerAs: "mc",
-        templateUrl: "js/main/index.component.html"
+        templateUrl: "index.component.html"
     });

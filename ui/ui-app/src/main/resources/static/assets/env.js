@@ -19,4 +19,4 @@
     }
     window.__env.themes = themes;
 
-}(this));
+}(window));

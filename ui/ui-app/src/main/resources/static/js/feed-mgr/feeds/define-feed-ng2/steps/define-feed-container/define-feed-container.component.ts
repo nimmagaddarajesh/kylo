@@ -21,8 +21,8 @@ import {FeedLink} from "../../shared/feed-link.model";
 
 @Component({
     selector: "define-feed-step-container",
-    styleUrls: ["js/feed-mgr/feeds/define-feed-ng2/steps/define-feed-container/define-feed-container.component.css"],
-    templateUrl: "js/feed-mgr/feeds/define-feed-ng2/steps/define-feed-container/define-feed-container.component.html"
+    styleUrls: ["define-feed-container.component.scss"],
+    templateUrl: "define-feed-container.component.html"
 })
 export class DefineFeedContainerComponent extends AbstractLoadFeedComponent implements OnInit, OnDestroy {
 

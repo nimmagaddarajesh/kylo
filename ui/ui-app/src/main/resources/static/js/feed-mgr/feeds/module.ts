@@ -4,17 +4,21 @@ import AccessConstants from "../../constants/AccessConstants";
 import lazyLoadUtil from "../../kylo-utils/LazyLoadUtil";
 //const lazyLoadUtil = require('../../kylo-utils/LazyLoadUtil');
 const moduleName = require('./module-name');
-const feedManager = require('kylo-feedmgr');
+import 'kylo-feedmgr'; //todo ruslan lazy import with chunk name?
+import 'kylo-common'; //for dir-pagination?
 
 class ModuleFactory  {
 
     module: ng.IModule;
     constructor () {
+        console.log('feeds/module factory constructor');
         this.module = angular.module(moduleName,[]);
         this.module.config(['$stateProvider','$compileProvider',this.configFn.bind(this)]);
     }
 
     configFn($stateProvider:any, $compileProvider:any) {
+        console.log('feeds/module configFn');
+
         $compileProvider.preAssignBindingsEnabled(true);
         $stateProvider.state(AccessConstants.UI_STATES.FEEDS.state, {
             url: '/feeds',
@@ -23,13 +27,22 @@ class ModuleFactory  {
             },
             views: {
                 'content': {
-                    templateUrl: 'js/feed-mgr/feeds/feeds-table.html',
+                    templateUrl: 'feeds-table.html',
                     controller:'FeedsTableController',
                     controllerAs:'vm'
                 }
             },
-            resolve: {
-                loadMyCtrl: this.lazyLoadController('feed-mgr/feeds/FeedsTableController')
+            lazyLoad: ($transition$) => {
+                const $ocLazyLoad = $transition$.injector().get("$ocLazyLoad");
+
+                return import(/* webpackChunkName: "feed-mgr.feeds.table.module" */ './FeedsTableController')
+                    .then(mod => {
+                        console.log('Imported ./FeedsTableController', mod);
+                        $ocLazyLoad.load(mod.default);
+                    })
+                    .catch(err => {
+                        throw new Error("Failed to load ./FeedsTableController, " + err);
+                    });
             },
             data: {
                 breadcrumbRoot: true,
@@ -40,10 +53,6 @@ class ModuleFactory  {
         });
 
     }
-    lazyLoadController(path:string){
-        return lazyLoadUtil.lazyLoadController(path,['feed-mgr/feeds/module-require']);
-    }
-
 }
 
 export default new ModuleFactory();

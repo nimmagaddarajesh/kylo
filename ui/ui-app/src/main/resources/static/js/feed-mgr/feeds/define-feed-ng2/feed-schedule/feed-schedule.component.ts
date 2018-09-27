@@ -12,7 +12,7 @@ import {FeedPreconditionDialogService} from "../../../shared/feed-precondition/f
 
 @Component({
     selector: "feed-schedule",
-    templateUrl: "js/feed-mgr/feeds/define-feed-ng2/feed-schedule/feed-schedule.component.html"
+    templateUrl: "feed-schedule.component.html"
 })
 export class FeedScheduleComponent implements OnInit, OnDestroy{
 

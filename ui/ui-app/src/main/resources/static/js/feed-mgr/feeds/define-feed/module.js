@@ -60,26 +60,26 @@ define(['angular','feed-mgr/feeds/define-feed/module-name','kylo-utils/LazyLoadU
 
 
 
-        $stateProvider.state(AccessConstants.default.UI_STATES.IMPORT_FEED.state, {
-            url: '/import-feed',
-            params: {},
-            views: {
-                'content': {
-                    templateUrl: 'js/feed-mgr/feeds/define-feed/import-feed.html',
-                    controller: 'ImportFeedController',
-                    controllerAs: 'vm'
-                }
-            },
-            resolve: {
-                loadMyCtrl: lazyLoadController(['feed-mgr/feeds/define-feed/ImportFeedController'])
-            },
-            data: {
-                breadcrumbRoot: false,
-                displayName: 'Import Feed',
-                module:moduleName,
-                permissions:AccessConstants.default.UI_STATES.IMPORT_FEED.permissions
-            }
-        });
+        // $stateProvider.state(AccessConstants.default.UI_STATES.IMPORT_FEED.state, {
+        //     url: '/import-feed',
+        //     params: {},
+        //     views: {
+        //         'content': {
+        //             templateUrl: 'js/feed-mgr/feeds/define-feed/import-feed.html',
+        //             controller: 'ImportFeedController',
+        //             controllerAs: 'vm'
+        //         }
+        //     },
+        //     resolve: {
+        //         loadMyCtrl: lazyLoadController(['feed-mgr/feeds/define-feed/ImportFeedController'])
+        //     },
+        //     data: {
+        //         breadcrumbRoot: false,
+        //         displayName: 'Import Feed',
+        //         module:moduleName,
+        //         permissions:AccessConstants.default.UI_STATES.IMPORT_FEED.permissions
+        //     }
+        // });
 
         function lazyLoadController(path){
             return lazyLoadUtil.default.lazyLoadController(path,['feed-mgr/feeds/module-require','feed-mgr/feeds/define-feed/module-require']);

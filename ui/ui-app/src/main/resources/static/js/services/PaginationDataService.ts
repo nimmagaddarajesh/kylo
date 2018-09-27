@@ -5,7 +5,6 @@ import {Common} from "../common/CommonTypes";
 import PaginationData = ListTableView.PaginationData;
 import PaginationDataService = ListTableView.PaginationDataService;
 import Tab = ListTableView.Tab;
-import {DefaultImportService} from "../feed-mgr/services/ImportService";
 import {moduleName} from './module-name';
 
 export enum ViewType {

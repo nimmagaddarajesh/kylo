@@ -10,8 +10,8 @@ import AccessConstants from '../../../../../../constants/AccessConstants';
 
 @Component({
     selector: "sla-list",
-    styleUrls: ["js/feed-mgr/feeds/define-feed-ng2/summary/sla/list/sla-list.component.css"],
-    templateUrl: "js/feed-mgr/feeds/define-feed-ng2/summary/sla/list/sla-list.component.html"
+    styleUrls: ["sla-list.component.scss"],
+    templateUrl: "sla-list.component.html"
 })
 export class SlaListComponent implements OnInit {
 

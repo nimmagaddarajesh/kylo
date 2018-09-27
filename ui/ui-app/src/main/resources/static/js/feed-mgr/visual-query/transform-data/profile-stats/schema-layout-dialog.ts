@@ -32,8 +32,8 @@ export class ColumnItem {
 }
 
 @Component({
-    templateUrl: 'js/feed-mgr/visual-query/transform-data/profile-stats/schema-layout-dialog.html',
-    styleUrls: ["js/feed-mgr/visual-query/transform-data/profile-stats/column-analysis.css"]
+    templateUrl: 'schema-layout-dialog.html',
+    styleUrls: ["column-analysis.scss"]
 })
 export class SchemaLayoutDialog {
 

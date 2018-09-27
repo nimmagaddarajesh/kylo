@@ -146,7 +146,7 @@ export class FeedCreationErrorService {
 
                 $mdDialog.show({
                     controller: 'FeedErrorDialogController',
-                    templateUrl: 'js/feed-mgr/feeds/define-feed/feed-error-dialog.html',
+                    templateUrl: '../feeds/define-feed/feed-error-dialog.html',
                     parent: angular.element(document.body),
                     clickOutsideToClose: false,
                     fullscreen: true,

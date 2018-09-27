@@ -2,7 +2,7 @@ import {Component} from "@angular/core";
 import {MatDialogRef} from "@angular/material/dialog";
 
 @Component({
-    templateUrl: "js/feed-mgr/visual-query/store/save-options.component.html"
+    templateUrl: "save-options.component.html"
 })
 export class SaveOptionsComponent {
 

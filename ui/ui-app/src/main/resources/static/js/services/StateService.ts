@@ -142,6 +142,7 @@ export default class StateService {
         }
 
         data.navigateToFeeds = () => {
+            console.log('navigateToFeeds');
             this.$state.go('feeds');
         }
 

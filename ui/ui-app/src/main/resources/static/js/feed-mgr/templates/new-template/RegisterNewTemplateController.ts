@@ -78,7 +78,7 @@ export class RegisterNewTemplateController {
 }
 
 angular.module(moduleName).component("registerNewTemplateController", {
-    templateUrl: 'js/feed-mgr/templates/new-template/register-new-template.html',
+    templateUrl: 'register-new-template.html',
     controller:   RegisterNewTemplateController,
     controllerAs:'vm'
 });

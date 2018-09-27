@@ -1,5 +1,5 @@
 import * as angular from "angular";
-import * as lazyLoad from "./kylo-utils/LazyLoadUtil";
+// import * as lazyLoad from "./kylo-utils/LazyLoadUtil";
 import * as _ from "underscore";
 const SVGMorpheus = require("../node_modules/svg-morpheus/compile/minified/svg-morpheus");
 //declare const SVGMorpheus: any;
@@ -29,22 +29,31 @@ import "ocLazyLoad";
 import "kylo-common";
 import "kylo-services";
 import "kylo-side-nav";
+import "dirPagination";
+import "../assets/env.js";
+
 'use strict';
 
+export const MODULE_NAME = 'kylo';
+
 class App {
-module: ng.IModule;
-constructor() {
-    (<any>window).SVGMorpheus = SVGMorpheus;
-    //d3 is needed here as nv.d3 isnt correctly getting it via its internal require call
-    (<any>window).d3 = d3;
-    if(!(<any>window).moment){
-        (<any>window).moment = moment;
-    }
-    var env = {};
-    // Import variables if present (from env.js)
-    if(window && (<any>window).__env){
-        Object.assign(env, (<any>window).__env);
-    }
+    module: ng.IModule;
+
+    constructor() {
+        (<any>window).SVGMorpheus = SVGMorpheus;
+
+        //d3 is needed here as nv.d3 isnt correctly getting it via its internal require call
+        // console.log('d3 is needed here as nv.d3 isnt correctly getting it via its internal require call');
+        // (<any>window).d3 = d3;
+
+        if (!(<any>window).moment) {
+            (<any>window).moment = moment;
+        }
+        var env = {};
+        // Import variables if present (from env.js)
+        if (window && (<any>window).__env) {
+            Object.assign(env, (<any>window).__env);
+        }
 
     this.module = angular.module("kylo", ['ui.router', 'ui.router.upgrade', 'oc.lazyLoad', 'ngMaterial','material.components.expansionPanels','md.data.table','ngMdIcons',
                                           'angularUtils.directives.dirPagination','kylo.common','kylo.services','kylo.side-nav','ngFx','ngAnimate','ngSanitize','ngTextTruncate', 'ui.grid',
@@ -61,13 +70,16 @@ constructor() {
         });
         this.module.constant('__env', env)
         this.module.config(['$mdAriaProvider','$mdThemingProvider','$mdIconProvider','$urlServiceProvider',
-                            'ngMdIconServiceProvider','$qProvider', '$translateProvider', 
+                            'ngMdIconServiceProvider','$qProvider', '$translateProvider',
                             'tmhDynamicLocaleProvider','__env',this.configFn.bind(this)]);
-         this.module.run(['$ocLazyLoad', '$translate', this.runFn.bind(this)]); 
+         this.module.run(['$ocLazyLoad', '$translate', this.runFn.bind(this)]);
     }
 
     configFn($mdAriaProvider: any,$mdThemingProvider: any, $mdIconProvider: any, $urlService: any,
              ngMdIconServiceProvider: any,$qProvider: any, $translateProvider: any, tmhDynamicLocaleProvider: any, __env:any){
+
+        // paginationTemplateProvider.setString(dirPaginationTemplate);
+
        //disable the aria-label warnings in the console
         $mdAriaProvider.disableWarnings();
 
@@ -192,15 +204,8 @@ constructor() {
             .addViewBox("kafka", "0 0 32 32");
     }
 
-    runFn($ocLazyLoad: any, $translate: any){
-        $ocLazyLoad.load({name:'kylo',files:['node_modules/angular-material-icons/angular-material-icons.css',
-                                             'node_modules/angular-material-expansion-panel/dist/md-expansion-panel.css',
-                                             'node_modules/angular-material-data-table/dist/md-data-table.css',
-                                             'node_modules/nvd3/build/nv.d3.css',
-                                             'node_modules/codemirror/lib/codemirror.css',
-                                             'node_modules/vis/dist/vis.min.css'
-        ]})
-
+    runFn($ocLazyLoad: any, $translate: any) {
+        $ocLazyLoad.load('kylo');
     }
 }
 const app = new App();
